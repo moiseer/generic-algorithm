@@ -6,4 +6,8 @@
         <UseWindowsForms>true</UseWindowsForms>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\GenericAlgorithm.Core\GenericAlgorithm.Core.csproj" />
+    </ItemGroup>
+
 </Project>

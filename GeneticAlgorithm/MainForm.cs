@@ -1,18 +1,21 @@
 ﻿using System;
 using System.Windows.Forms;
-using GeneticAlgorithm.Core;
+using GenericAlgorithm.Core.Algorithms;
+using GenericAlgorithm.Core.Data;
 using GeneticAlgorithm.Models;
 
 namespace GeneticAlgorithm
 {
     public partial class MainForm : Form
     {
-        private GenericService service;
+        private readonly GenericService service;
+        private readonly PointsFactory pointsFactory;
+        
         public MainForm()
         {
             InitializeComponent();
-
-            service = new GenericService(new RatingFunction());
+            pointsFactory = new PointsFactory();
+            service = new GenericService(new RatingFunction(), pointsFactory.CreateLinePoints());
             for (var i = 0; i < service.Points.Count; i++)
             {
                 PointListBox.Items.Add($"Point {i}: {service.Points[i].ToString()}");
@@ -73,7 +76,7 @@ namespace GeneticAlgorithm
 
         private void UpdatePointsButton_Click(object sender, EventArgs e)
         {
-            service.Points = service.CreatePoints();
+            service.Points = pointsFactory.CreateRandomPoints();
             PointListBox.Items.Clear();
             for (var i = 0; i < service.Points.Count; i++)
             {

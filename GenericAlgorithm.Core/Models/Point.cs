@@ -1,4 +1,6 @@
-﻿namespace GeneticAlgorithm.Core
+﻿using System;
+
+namespace GenericAlgorithm.Core.Models
 {
     public struct Point
     {

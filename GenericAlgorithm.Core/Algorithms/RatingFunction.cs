@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using GenericAlgorithm.Core.Models;
 using GeneticAlgorithm.Models;
 
-namespace GeneticAlgorithm.Core
+namespace GenericAlgorithm.Core.Algorithms
 {
     public class RatingFunction : IRatingFunction
     {

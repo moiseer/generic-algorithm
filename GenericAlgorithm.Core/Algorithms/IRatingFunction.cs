@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using GenericAlgorithm.Core.Models;
 using GeneticAlgorithm.Models;
 
-namespace GeneticAlgorithm.Core
+namespace GenericAlgorithm.Core.Algorithms
 {
     public interface IRatingFunction
     {
