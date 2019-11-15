@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using GenericAlgorithm.Core.Models;
 using GeneticAlgorithm.Models;
 
-namespace GeneticAlgorithm.Core
+namespace GenericAlgorithm.Core.Algorithms
 {
     public class GenericService
     {
@@ -13,21 +14,13 @@ namespace GeneticAlgorithm.Core
         private readonly double minValue = -1000000;
         private readonly IRatingFunction ratingFunction;
         
-        public List<Point> Points { get; set; }
+        public IList<Point> Points { get; set; }
         public List<Population> PopulationHistory { get; set; }
 
-        public GenericService(IRatingFunction ratingFunction)
+        public GenericService(IRatingFunction ratingFunction, IList<Point> points)
         {
             this.ratingFunction = ratingFunction;
-            
-            Points = new List<Point>
-            {
-                new Point(0, 0),
-                new Point(10, 10),
-                new Point(20, 20),
-                new Point(30, 30),
-                new Point(40, 40)
-            };
+            Points = points;
         }
 
         public void InitCore(double clippingThreshold, double crossChance, double generationGap, double mutationPercent, double mutationProbability)
@@ -40,21 +33,6 @@ namespace GeneticAlgorithm.Core
                 MutationPercent = mutationPercent,
                 MutationProbability = mutationProbability
             };
-        }
-
-        public List<Point> CreatePoints()
-        {
-            Random random = new Random();
-            var points = new List<Point>
-            {
-                new Point(random.Next(0, 10), random.Next(0, 10)),
-                new Point(random.Next(10, 20), random.Next(10, 20)),
-                new Point(random.Next(20, 30), random.Next(20, 30)),
-                new Point(random.Next(30, 40), random.Next(30, 40)),
-                new Point(random.Next(40, 50), random.Next(40, 50))
-            };
-            
-            return points;
         }
 
         public Individual GetResult(int populationSize, int populationCount)
