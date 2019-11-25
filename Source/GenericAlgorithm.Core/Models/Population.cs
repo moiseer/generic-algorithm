@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GeneticAlgorithm.Models
+namespace GenericAlgorithm.Core.Models
 {
     public class Population
     {

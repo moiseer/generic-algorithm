@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using GenericAlgorithm.Core.Algorithms;
 using GenericAlgorithm.Core.Data;
-using GeneticAlgorithm.Models;
+using GenericAlgorithm.Core.Models;
 
 namespace GeneticAlgorithm
 {

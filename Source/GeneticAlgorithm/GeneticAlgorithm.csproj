@@ -6,6 +6,14 @@
         <UseWindowsForms>true</UseWindowsForms>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <OutputPath>../../Out/Debug/GenericAlgorithm</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <OutputPath>../../Out/Release/GenericAlgorithm</OutputPath>
+    </PropertyGroup>
+
     <ItemGroup>
       <ProjectReference Include="..\GenericAlgorithm.Core\GenericAlgorithm.Core.csproj" />
     </ItemGroup>

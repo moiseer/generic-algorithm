@@ -1,20 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
-namespace GeneticAlgorithm.Models
+namespace GenericAlgorithm.Core.Models
 {
     public class Individual
     {
-        public List<Gen> Genes { get; set; }
-        public double Rating { get; set; }
-
         public Individual()
         {
             Genes = new List<Gen>();
         }
 
+        public List<Gen> Genes { get; }
+        public double Rating { get; set; }
+
         public Individual Clone()
         {
-            var clone = new Individual {Genes = new List<Gen>(), Rating = Rating};
+            var clone = new Individual { Rating = Rating };
             foreach (var gen in Genes)
             {
                 clone.Genes.Add(gen.Clone());

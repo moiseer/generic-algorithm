@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GeneticAlgorithm.Models
+namespace GenericAlgorithm.Core.Models
 {
     public class Gen
     {

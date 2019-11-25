@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using GenericAlgorithm.Core.Data;
 using GenericAlgorithm.Core.Models;
-using GeneticAlgorithm.Models;
 
 namespace GenericAlgorithm.Core.Algorithms
 {

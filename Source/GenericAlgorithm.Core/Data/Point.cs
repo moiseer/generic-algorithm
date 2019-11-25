@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GenericAlgorithm.Core.Models
+namespace GenericAlgorithm.Core.Data
 {
     public struct Point
     {
